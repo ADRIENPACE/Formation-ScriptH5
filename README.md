@@ -4,6 +4,8 @@ Projet **Infor M3** pour la création de scripts H5 permettant d’interagir ave
 
 Les scripts H5 s’exécutent côté client dans l’interface M3 et permettent d’étendre ou d’automatiser le comportement des écrans (listes, formulaires, dialogues, etc.).
 
+> **Important** — On développe **uniquement sur les fichiers `.ts`** (TypeScript). On ne modifie les fichiers `.js` (JavaScript) **que lorsqu’on n’a pas les sources TypeScript** (fichiers livrés ou hérités sans `.ts`).
+
 ---
 
 ## Documentation
