@@ -1,0 +1,67 @@
+Format: [Modified Date] [Summary of changes]
+
+MARCH 19, 2021
+- Added `IActiveGrid` entry
+- Moved the `GetListColumnData()` method from the `ListView` to `ListControl` and updated its example code
+- Fixed wrong grammar in the Return part of the `GetDatagrid()` method
+
+April 1, 2023
+- Added example for POST method using ION API Service
+
+May 30, 2023
+- Added support for date picker in version 2.0 or later
+- Added an example for date picker implementation in H5SampleAddElements
+
+June 06, 2023
+- Added support for `ExportToExcel()` and `ExportToGoogleSheets()` in version 2.0 or later
+- Provided access to `Response.ControlData`
+- Created H5SampleExportToExcel
+
+July 17, 2023
+- Added support for hiding column/s by column name in version 2.0 or later
+- Created H5SampleHideColumns
+
+July 19, 2023
+- Added support for radio buttons (radio group) in version 2.0 or later
+- Added an example for radio group implementation in H5SampleAddElements
+
+August 4, 2023
+- Added official methods for displaying and hiding busy indicator in version 2.0 or later
+
+October 2, 2023
+- Added one item in Best Practices
+
+November 13, 2023
+- Added scan tool and its documentation
+- Minor table of contents change
+
+November 20, 2023
+- Minor change in scan tool documentation
+- Resized scan tool
+
+January 24, 2024
+- added `getPosFieldElement()`, `getCellElement()`, and `getRowElement()`
+
+March 26, 2024
+- updated scantool to fix the infinite loading when there are no jquery code found
+
+October 15,2024
+- updated H5SampleIONService files due to Mingle API deprecations effective on October 30, 2024
+
+March 25, 2025
+- updated smart blog link into infor community
+
+June 10, 2025
+- updated the Infor Community M3 Development Guide to address outdated steps related to navigating the Community website.
+
+July 18, 2025
+- Added IES Search Handling for H5SampleCustomColumns script
+- Added changes in H5SampleSelectionChanged to handle subscription of listener when fetching list records
+
+July 22, 2025
+- Changed http to use https for H5SampleCurrencyXML.
+
+October 22, 2025
+- Major update on H5 Scripting Documentation
+- Removed addM3Button2 from H5SampleIonApiService
+- Added H5SampleScriptTemplate to the Templates folder
