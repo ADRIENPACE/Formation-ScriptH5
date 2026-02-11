@@ -33,6 +33,7 @@ var H5SampleCancelRequest = (function () {
             return; // The user should be allowed to go back
         }
         this.controller.PressKey("ENTER");
+        this.controller.ListOption("5");
         /*const fullName = ScriptUtil.GetFieldValue("WWTX40");
 
         if (fullName && fullName.indexOf("Infor") >= 0) {
