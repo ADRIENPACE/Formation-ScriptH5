@@ -73,6 +73,26 @@ Le travail du projet se fait dans **Samples**. Deux scripts permettent d’insta
 2. À chaque session de travail, exécuter **StartWebServer.cmd** pour lancer le serveur (fenêtre « Web Server » sur le port 8080, répertoire `../Samples`).
 3. Laisser la fenêtre ouverte tant que vous travaillez ; fermer pour arrêter le serveur.
 
+**Tester un script avec une URL locale**
+
+Pour charger un script depuis votre machine (serveur local) dans M3, utilisez le paramètre `localScript` dans l’URL H5. Il faut ouvrir l’URL dans un **onglet H5 M3** (connexion M3 active) pour que le script soit relié à l’ERP.
+
+*Modèles d’URL :*
+
+(1) `<H5 URL>?localScript=<IIS Express URL>/<Script name>`
+
+(2) `<H5 URL>?scriptCache=false&localScript=<IIS Express URL>/<Script name>`
+
+*Exemples (remplacer le port par celui de votre serveur local, ex. 8080 pour StartWebServer ou 49482 pour IIS Express) :*
+
+(1)  
+`https://m3ce.inforcloudsuite.com/mne/ext/h5xi/?localScript=http://localhost:49482/H5SampleHelloWorld.js`
+
+(2)  
+`https://m3ce.inforcloudsuite.com/mne/ext/h5xi/?scriptCache=false&localScript=http://localhost:49482/H5SampleHelloWorld.js`
+
+La variante (2) avec `scriptCache=false` force le rechargement du script sans cache, utile pendant le développement.
+
 ---
 
 ## Démarrage
