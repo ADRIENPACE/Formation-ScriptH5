@@ -8,6 +8,18 @@ Les scripts H5 s’exécutent côté client dans l’interface M3 et permettent 
 
 ---
 
+## Index
+
+- [Documentation](#documentation)
+- [Bibliothèques et typings](#bibliothèques-et-typings)
+- [Structure du projet](#structure-du-projet)
+- [Serveur web (Samples)](#serveur-web-samples)
+- [Démarrage](#démarrage)
+- [Exemple minimal (Hello World)](#exemple-minimal-hello-world)
+- [Versions et historique](#versions-et-historique)
+
+---
+
 ## Documentation
 
 La documentation détaillée du SDK, du fonctionnement des scripts H5 et de la connexion à l’ERP M3 est disponible dans :
