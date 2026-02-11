@@ -45,9 +45,9 @@ var H5SampleCustomColumns = (function () {
             for (var i = 0; i < dataset.length; i++) {
                 var data = dataset[i];
                 data[columnId] = "Dummy Data" + i;
+                list.updateCellValue(data.index, columnId, "Dummy Data" + 0); //Cloud
             }
             //list.setData(dataset);
-            list.updateCellValue(0, columnId, "Dummy Data" + 0); //Cloud
         }
         else {
             for (var i = 0; i < list.getData().getLength(); i++) {
@@ -55,7 +55,7 @@ var H5SampleCustomColumns = (function () {
                 newData[columnId] = "Dummy Data" + i;
                 newData["id_" + columnId] = "R" + (i + 1) + columnId;
                 //$.extend(list.getData().getItem(i), newData);
-                list.setDataItemValueForColumn(i, columnId, "Dummy Data" + i); //OnPromise
+                list.setDataItemValueForColumn(list.getData().getItem(i), columnId, "Dummy Data" + i); //OnPromise
             }
             var columns = list.getColumns();
             list.setColumns(columns);
