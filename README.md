@@ -80,10 +80,12 @@ Pour charger un script depuis votre machine (serveur local) dans M3, utilisez le
 *Modèle d’URL :*  
 `<H5 URL>?scriptCache=false&localScript=<Node.js server URL>/<Script name>`
 
-*Exemple : Cloud*  
+*Exemple Cloud:*  
 `https://m3ce.inforcloudsuite.com/mne/ext/h5xi/?scriptCache=false&localScript=http://localhost:8080/H5SampleHelloWorld.js`
-*Exemple : OnPromise*  
+
+*Exemple OnPromise:*  
 `https://m3ce.inforcloudsuite.com/mne/?scriptCache=false&localScript=http://localhost:8080/H5SampleHelloWorld.js`
+
 ---
 
 ## Démarrage
