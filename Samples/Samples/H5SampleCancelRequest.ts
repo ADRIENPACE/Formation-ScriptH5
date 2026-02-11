@@ -36,16 +36,18 @@ class H5SampleCancelRequest {
 
     private onRequesting(args: CancelRequestEventArgs): void {
         this.log.Info("onRequesting");
-        if (args.commandType === "KEY" && args.commandValue === "F12") {
+        if (args.commandType === "KEY" && args.commandValue === "ENTER") {
+            args.cancel = true;
             return; // The user should be allowed to go back
         }
-
-        const fullName = ScriptUtil.GetFieldValue("WWTX40");
+        this.controller.PressKey("ENTER");
+        this.controller.ListOption("5");
+        /*const fullName = ScriptUtil.GetFieldValue("WWTX40");
 
         if (fullName && fullName.indexOf("Infor") >= 0) {
             this.controller.ShowMessage(fullName + " is not a valid project leader.");
             args.cancel = true;
-        }
+        }*/
     }
 
     private onRequested(args: RequestEventArgs): void {

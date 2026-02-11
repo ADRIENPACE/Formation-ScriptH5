@@ -497,6 +497,9 @@ interface IActiveGrid {
 	setSelectedRows(rows: any[]): void;
 	getSelectedGridRows(): any[]
 
+	setDataItemValueForColumn(row: number, columnId: string, value: any): void;//OnPromise
+	updateCellValue(rowIndex: number, columnId: any, value: any): void;        //Cloud
+
 	//web components
 	getPosFieldElement(posFieldId: string): HTMLElement;
 	getCellElement(row: number, columnId: string): HTMLElement;

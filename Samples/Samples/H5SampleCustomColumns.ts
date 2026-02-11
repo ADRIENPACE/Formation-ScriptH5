@@ -57,13 +57,15 @@ class H5SampleCustomColumns {
                 const data = dataset[i];
                 data[columnId] = "Dummy Data" + i;
             }
-            list.setData(dataset);
+            //list.setData(dataset);
+            list.updateCellValue(0, columnId, "Dummy Data" + 0);//Cloud
         } else {
             for (let i = 0; i < list.getData().getLength(); i++) {
                 let newData = {};
                 newData[columnId] = "Dummy Data" + i;
                 newData["id_" + columnId] = "R" + (i + 1) + columnId;
-                $.extend(list.getData().getItem(i), newData);
+                //$.extend(list.getData().getItem(i), newData);
+                list.setDataItemValueForColumn(i, columnId, "Dummy Data" + i);//OnPromise
             }
             let columns = list.getColumns();
             list.setColumns(columns);
