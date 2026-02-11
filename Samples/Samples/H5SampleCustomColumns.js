@@ -4,7 +4,7 @@
 /**
  * Appends a column to the current grid
  */
-var H5SampleCustomColumns = /** @class */ (function () {
+var H5SampleCustomColumns = (function () {
     function H5SampleCustomColumns(scriptArgs) {
         this.controller = scriptArgs.controller;
     }
@@ -30,7 +30,7 @@ var H5SampleCustomColumns = /** @class */ (function () {
             name: "Custom Column " + columnNum,
             width: 100
         };
-        if (columns.find((column) => column.id === newColumn.id)) {
+        if (columns.filter(function (column) { return column.id === newColumn.id; }).length > 0) {
             return; //Do not append column;
         }
         if (columns.length < columnNum) {
@@ -65,12 +65,13 @@ var H5SampleCustomColumns = /** @class */ (function () {
             //Populate additional data on scroll
             if (e.commandType === "PAGE" && e.commandValue === "DOWN") {
                 _this.populateData(list, columnNum);
-            } else if (e.commandType === "SEARCH") {
-                var customColumnNum = list.getColumns().length + 1;
-                const timeout = setTimeout(() => {
-                _this.appendColumn(list, customColumnNum);
-                _this.populateData(list, columnNum);
-                clearTimeout(timeout);
+            }
+            else if (e.commandType === "SEARCH") {
+                var customColumnNum_1 = list.getColumns().length + 1;
+                var timeout_1 = setTimeout(function () {
+                    _this.appendColumn(list, customColumnNum_1);
+                    _this.populateData(list, columnNum);
+                    clearTimeout(timeout_1);
                 }, 300);
             }
             else {

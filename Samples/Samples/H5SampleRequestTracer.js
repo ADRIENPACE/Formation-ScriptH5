@@ -11,7 +11,7 @@
  * in this scenario since the script will only attach once. There are scenarios were a real script would do the same
  * but this is not common, in most cases all events should be detached.
  */
-var H5SampleRequestTracer = /** @class */ (function () {
+var H5SampleRequestTracer = (function () {
     function H5SampleRequestTracer(args) {
         this.scriptName = "H5SampleRequestTracer";
         this.controller = args.controller;

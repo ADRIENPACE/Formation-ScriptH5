@@ -12,7 +12,7 @@
  * Address and Charges buttons (option 11, 12) in CRS610/B
  * [{"option":"11","text":"Addresses","top":"79","left":"79","width":"120"},{"option":"12","text":"Charges","top":"79","left":"216","width":"120"}]
  */
-var H5SampleOptionButton = /** @class */ (function () {
+var H5SampleOptionButton = (function () {
     function H5SampleOptionButton(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;

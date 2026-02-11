@@ -6,7 +6,7 @@
  * The script adds a click event to the attached element which opens the field help of the element based on the argument supplied.
  * When there is no argument, the script will use the element name where it is attached.
  */
-var H5SampleOpenFieldHelp = /** @class */ (function () {
+var H5SampleOpenFieldHelp = (function () {
     function H5SampleOpenFieldHelp() {
     }
     H5SampleOpenFieldHelp.Init = function (args) {

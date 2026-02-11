@@ -5,7 +5,7 @@
  * Searches for two specific elements that contain the headers and the row content to be displayed in a table.
  * When this script is loaded in CRS020/F, a table with one row of data is displayed.
  */
-var H5SamplePreviewListHeader = /** @class */ (function () {
+var H5SamplePreviewListHeader = (function () {
     function H5SamplePreviewListHeader(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;

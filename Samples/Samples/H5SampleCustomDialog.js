@@ -1,4 +1,4 @@
-var H5SampleCustomDialog = /** @class */ (function () {
+var H5SampleCustomDialog = (function () {
     function H5SampleCustomDialog(args) {
         this.scriptName = "H5SampleCustomDialog";
         this.isDialogShown = false;

@@ -5,7 +5,7 @@
  * Retrieves the user ID from the user context
  * and creates an automation that starts MNS150 and opens the user in change mode.
  */
-var H5SampleMFormsAutomation = /** @class */ (function () {
+var H5SampleMFormsAutomation = (function () {
     function H5SampleMFormsAutomation(args) {
         this.controller = args.controller;
         this.log = args.log;

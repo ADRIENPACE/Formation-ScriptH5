@@ -4,7 +4,7 @@
 /**
  * Shows a message dialog with the index of the selected list row and the content of the first cell on the selected row.
  */
-var H5SampleSelectionChanged = /** @class */ (function () {
+var H5SampleSelectionChanged = (function () {
     function H5SampleSelectionChanged(args) {
         this.scriptName = "H5SampleSelectionChanged";
         this.controller = args.controller;

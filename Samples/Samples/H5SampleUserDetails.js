@@ -5,7 +5,7 @@
  * Adds a custom ButtonElement on the Panel.
  * When the button is clicked, a message dialog shows M3-related data about the logged on user.
  */
-var H5SampleUserDetails = /** @class */ (function () {
+var H5SampleUserDetails = (function () {
     function H5SampleUserDetails(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;

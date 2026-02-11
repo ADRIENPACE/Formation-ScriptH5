@@ -22,7 +22,7 @@
  * Online JSON validator.
  * http://jsonlint.com/
  */
-var H5SampleRegexValidator = /** @class */ (function () {
+var H5SampleRegexValidator = (function () {
     function H5SampleRegexValidator(scriptArgs) {
         this.scriptName = "H5SampleRegexValidator";
         this.controller = scriptArgs.controller;

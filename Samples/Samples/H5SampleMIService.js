@@ -5,7 +5,7 @@
 /**
  * Executes M3 API calls to retrieve user data
  */
-var H5SampleMIService = /** @class */ (function () {
+var H5SampleMIService = (function () {
     function H5SampleMIService(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;
@@ -58,7 +58,7 @@ var H5SampleMIService = /** @class */ (function () {
             //Read results here
             for (var _i = 0, _a = response.items; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("1: Company: ".concat(item.CONO));
+                _this.log.Info("1: Company: " + item.CONO);
             }
         }).catch(function (response) {
             //Handle errors here
@@ -75,7 +75,7 @@ var H5SampleMIService = /** @class */ (function () {
             //Read results here
             for (var _i = 0, _a = response.items; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("2: Division: ".concat(item.DIVI));
+                _this.log.Info("2: Division: " + item.DIVI);
             }
         }).catch(function (response) {
             //Handle errors here
@@ -97,12 +97,12 @@ var H5SampleMIService = /** @class */ (function () {
         this.miService.executeRequest(myRequest).then(function (response) {
             //Since CONO is numeric based on the metadata, this will read "999 is a number"
             //If request.typedOutput = false, everything will be a string and this will read "999  is a string"
-            _this.log.Info("3: ".concat(response.item.CONO, " is a ").concat(typeof response.item.CONO));
+            _this.log.Info("3: " + response.item.CONO + " is a " + typeof response.item.CONO);
             //Read metadata
             var metadata = response.metadata;
             for (var field in metadata) {
                 var info = metadata[field];
-                _this.log.Info("3: ".concat(field, ": ").concat(info.description, " (").concat(MIDataType[info.type], ")"));
+                _this.log.Info("3: " + field + ": " + info.description + " (" + MIDataType[info.type] + ")");
             }
         }, function (response) {
             //Alternatively, pass a second function to then instead of using catch
@@ -133,11 +133,11 @@ var H5SampleMIService = /** @class */ (function () {
             var response2 = response[1];
             for (var _i = 0, _a = response1["items"]; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("4: DTFM: ".concat(item.DTFM));
+                _this.log.Info("4: DTFM: " + item.DTFM);
             }
             for (var _b = 0, _c = response2["items"]; _b < _c.length; _b++) {
                 var item = _c[_b];
-                _this.log.Info("4: USID: ".concat(item.USID));
+                _this.log.Info("4: USID: " + item.USID);
             }
         }).catch(function (response) {
             //Handle errors here

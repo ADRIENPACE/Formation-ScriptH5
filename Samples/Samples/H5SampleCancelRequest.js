@@ -6,7 +6,7 @@
  * Subscribes to the Requesting event
  * On event, it checks the name of the project leader. If invalid, it cancels the request and shows an error message
  */
-var H5SampleCancelRequest = /** @class */ (function () {
+var H5SampleCancelRequest = (function () {
     function H5SampleCancelRequest(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;

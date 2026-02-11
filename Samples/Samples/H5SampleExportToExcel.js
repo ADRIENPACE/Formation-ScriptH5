@@ -4,7 +4,7 @@
 /**
  * Opens up a dialog to Export to Excel or Google Sheets
  */
-var H5SampleExportToExcel = /** @class */ (function () {
+var H5SampleExportToExcel = (function () {
     function H5SampleExportToExcel(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.args = scriptArgs.args;

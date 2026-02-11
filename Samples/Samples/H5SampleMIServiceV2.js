@@ -5,7 +5,7 @@
 /**
  * Executes M3 API calls to retrieve user data
  */
-var H5SampleMIServiceV2 = /** @class */ (function () {
+var H5SampleMIServiceV2 = (function () {
     function H5SampleMIServiceV2(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;
@@ -58,7 +58,7 @@ var H5SampleMIServiceV2 = /** @class */ (function () {
             //Read results here
             for (var _i = 0, _a = response.items[0]; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("1: Company: ".concat(item.CONO));
+                _this.log.Info("1: Company: " + item.CONO);
             }
         }).catch(function (response) {
             //Handle errors here
@@ -75,7 +75,7 @@ var H5SampleMIServiceV2 = /** @class */ (function () {
             //Read results here
             for (var _i = 0, _a = response.items; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("2: Division: ".concat(item.DIVI));
+                _this.log.Info("2: Division: " + item.DIVI);
             }
         }).catch(function (response) {
             //Handle errors here
@@ -97,7 +97,7 @@ var H5SampleMIServiceV2 = /** @class */ (function () {
         this.miService.executeRequestV2(myRequest).then(function (response) {
             //Since CONO is numeric based on the metadata, this will read "999 is a number"
             //If request.typedOutput = false, everything will be a string and this will read "999  is a string"
-            _this.log.Info("3: ".concat(response.items[0].CONO, " is a ").concat(typeof response.items[0].CONO));
+            _this.log.Info("3: " + response.items[0].CONO + " is a " + typeof response.items[0].CONO);
         }, function (response) {
             //Alternatively, pass a second function to then instead of using catch
             //Handle errors here
@@ -127,11 +127,11 @@ var H5SampleMIServiceV2 = /** @class */ (function () {
             var response2 = response[1];
             for (var _i = 0, _a = response1["items"]; _i < _a.length; _i++) {
                 var item = _a[_i];
-                _this.log.Info("4: DTFM: ".concat(item.DTFM));
+                _this.log.Info("4: DTFM: " + item.DTFM);
             }
             for (var _b = 0, _c = response2["items"]; _b < _c.length; _b++) {
                 var item = _c[_b];
-                _this.log.Info("4: USID: ".concat(item.USID));
+                _this.log.Info("4: USID: " + item.USID);
             }
         }).catch(function (response) {
             //Handle errors here

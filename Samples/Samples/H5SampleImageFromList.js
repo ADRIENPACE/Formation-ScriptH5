@@ -7,7 +7,7 @@
  * The base URL to the images are retrieved from the script arguments.
  * For the script to work properly, there must be images in the folder of the URL whose names (not including the file extension) match the values of the first column in the list.
  */
-var H5SampleImageFromList = /** @class */ (function () {
+var H5SampleImageFromList = (function () {
     function H5SampleImageFromList(scriptArgs) {
         this.imgLink = "";
         this.controller = scriptArgs.controller;
@@ -38,8 +38,8 @@ var H5SampleImageFromList = /** @class */ (function () {
         var height = contentBody.height();
         var width = contentBody.width() / 2 - 20;
         var top = isVersion2 ? 'initial' : '0px';
-        var style = "z-index:1000; \n                       display: block;\n                       max-width:".concat(width, "px; \n                       overflow: hidden;\n                       position:absolute;\n                       left:50%;\n                       max-height:").concat(height, "px; \n                       top:").concat(top, ";");
-        var $image = $("<div id='newImg' style='".concat(style, "'><img style='width:100%;' src='").concat(src, "'></img></div>"));
+        var style = "z-index:1000; \n                       display: block;\n                       max-width:" + width + "px; \n                       overflow: hidden;\n                       position:absolute;\n                       left:50%;\n                       max-height:" + height + "px; \n                       top:" + top + ";";
+        var $image = $("<div id='newImg' style='" + style + "'><img style='width:100%;' src='" + src + "'></img></div>");
         if (isVersion2) {
             this.content.Append($image, contentBody);
         }

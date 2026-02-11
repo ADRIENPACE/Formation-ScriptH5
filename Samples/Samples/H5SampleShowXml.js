@@ -4,7 +4,7 @@
 /**
  * Displays the raw XML content of an MForm from the View Definitions file.
  */
-var H5SampleShowXml = /** @class */ (function () {
+var H5SampleShowXml = (function () {
     function H5SampleShowXml(args) {
         this.controller = args.controller;
         this.log = args.log;
@@ -28,16 +28,16 @@ var H5SampleShowXml = /** @class */ (function () {
             return H5SampleShowXml.charMap[ch];
         });
     };
-    H5SampleShowXml.charMap = {
-        '<': '&lt;',
-        '>': '&gt;',
-        '&': '&amp;',
-        '"': '&quot;',
-        "'": '&#39;',
-        '!': '&#33;',
-        '[': '&#91;',
-        ']': '&#93;'
-    };
     return H5SampleShowXml;
 }());
+H5SampleShowXml.charMap = {
+    '<': '&lt;',
+    '>': '&gt;',
+    '&': '&amp;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '!': '&#33;',
+    '[': '&#91;',
+    ']': '&#93;'
+};
 //# sourceMappingURL=H5SampleShowXml.js.map

@@ -6,7 +6,7 @@
  * depending on the latitude, longitude, and zoom values specified in the text fields.
  * This can be used in OIS002/F.
  */
-var H5SampleShowOnMap = /** @class */ (function () {
+var H5SampleShowOnMap = (function () {
     function H5SampleShowOnMap(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;

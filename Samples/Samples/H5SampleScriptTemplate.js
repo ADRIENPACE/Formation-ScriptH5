@@ -1,4 +1,4 @@
-var H5SampleScriptTemplate = /** @class */ (function () {
+var H5SampleScriptTemplate = (function () {
     function H5SampleScriptTemplate(scriptArgs) {
         this.log = scriptArgs.log;
     }

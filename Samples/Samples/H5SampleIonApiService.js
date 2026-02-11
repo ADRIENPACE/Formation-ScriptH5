@@ -17,7 +17,7 @@
  *  - When the token times out, you must acquire a new token and update the script arguments.
  *  - Update - 10/14/2024 - Mingle endpoints have been depricated for user ion detail apis - updated to use IFS with the same functionalities
  */
-var H5SampleIonApiService = /** @class */ (function () {
+var H5SampleIonApiService = (function () {
     function H5SampleIonApiService(args) {
         this.mingleEndpoint = "Mingle";
         this.ifsEndpoint = "ifsservice";
@@ -70,7 +70,7 @@ var H5SampleIonApiService = /** @class */ (function () {
         var $run = contentElement.AddElement(run);
         $run.click(function () {
             var request = {
-                url: "".concat(_this.ionApiService.getBaseUrl(), "/").concat(_this.ifsEndpoint, "/usermgt/v2/users/me"),
+                url: _this.ionApiService.getBaseUrl() + "/" + _this.ifsEndpoint + "/usermgt/v2/users/me",
                 method: "GET"
             };
             _this.ionApiService.execute(request).then(function (response) {
@@ -106,7 +106,7 @@ var H5SampleIonApiService = /** @class */ (function () {
         $run.click(function () {
             var message = "Hello, check email only if received. No need to click anything from email verification, if email received, working post.";
             var request = {
-                url: "".concat(_this.ionApiService.getBaseUrl(), "/").concat(_this.ifsEndpoint, "/usermgt/v2/users/me/verify/email"),
+                url: _this.ionApiService.getBaseUrl() + "/" + _this.ifsEndpoint + "/usermgt/v2/users/me/verify/email",
                 method: "POST",
                 responseType: "json",
                 data: { MessageText: message },
@@ -140,7 +140,7 @@ var H5SampleIonApiService = /** @class */ (function () {
         var $run = contentElement.AddElement(run);
         $run.click(function () {
             var request = {
-                url: "".concat(_this.ionApiService.getBaseUrl(), "/").concat(_this.ifsEndpoint, "/usermgt/v2/users/me"),
+                url: _this.ionApiService.getBaseUrl() + "/" + _this.ifsEndpoint + "/usermgt/v2/users/me",
                 method: "PUT"
             };
             _this.ionApiService.execute(request).then(function (response) {
@@ -175,7 +175,7 @@ var H5SampleIonApiService = /** @class */ (function () {
         var $run = contentElement.AddElement(run);
         $run.click(function () {
             var request = {
-                url: "".concat(_this.ionApiService.getBaseUrl(), "/").concat(_this.ifsEndpoint, "/usermgt/v2/users/me"),
+                url: _this.ionApiService.getBaseUrl() + "/" + _this.ifsEndpoint + "/usermgt/v2/users/me",
                 method: "DELETE"
             };
             _this.ionApiService.execute(request).then(function (response) {
@@ -207,7 +207,7 @@ var H5SampleIonApiService = /** @class */ (function () {
         var $run = contentElement.AddElement(run);
         $run.click(function () {
             var request = {
-                url: "/".concat(_this.m3Endpoint, "/MNS150MI/GetUserData/"),
+                url: "/" + _this.m3Endpoint + "/MNS150MI/GetUserData/",
                 method: "GET",
                 record: {
                     USID: ScriptUtil.GetUserContext("USID")
@@ -216,7 +216,7 @@ var H5SampleIonApiService = /** @class */ (function () {
             _this.ionApiService.execute(request).then(function (response) {
                 var responseData = response.data.MIRecord[0];
                 var firstRecord = responseData.NameValue.find(function (nv) { return nv.Name === "EMAL"; });
-                if (firstRecord === null || firstRecord === void 0 ? void 0 : firstRecord.Value) {
+                if (firstRecord ? .Value : ) {
                     _this.controller.ShowMessage(firstRecord.Value);
                 }
             }).catch(function (response) {

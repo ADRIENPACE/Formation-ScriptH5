@@ -8,7 +8,7 @@
  * The list will only be displayed if the currency on the E-panel exists in the XML returned from the server.
  * Since currency data is retrieved from a different domain, this will only work in development mode when CORS policy is disabled for browser.
  */
-var H5SampleCurrencyXML = /** @class */ (function () {
+var H5SampleCurrencyXML = (function () {
     function H5SampleCurrencyXML(scriptArgs) {
         this.parsedDataKey = "ParsedCurrencyData";
         this.controller = scriptArgs.controller;
@@ -120,7 +120,7 @@ var H5SampleCurrencyXML = /** @class */ (function () {
     return H5SampleCurrencyXML;
 }());
 /* We use this custom class because Map is not supported in ES5 */
-var CurrencyData = /** @class */ (function () {
+var CurrencyData = (function () {
     function CurrencyData() {
         this.data = {};
     }

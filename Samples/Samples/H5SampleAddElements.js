@@ -5,7 +5,7 @@
  * Adds label, textbox, combobox, checkbox, button, date picker, and radio group
  * On button click, toggles the checkbox and prints the textbox and combobox values on the console
  */
-var H5SampleAddElements = /** @class */ (function () {
+var H5SampleAddElements = (function () {
     function H5SampleAddElements(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;
@@ -92,8 +92,8 @@ var H5SampleAddElements = /** @class */ (function () {
             var $textBox = $("#testTextBox");
             var $selected = $("#testComboBox").find('option:selected');
             var $cbox = $('#testCheckBox');
-            _this.log.Info("Text value: ".concat($textBox.val()));
-            _this.log.Info("Selected option: ".concat($selected.val(), " (").concat($selected.text(), ")"));
+            _this.log.Info("Text value: " + $textBox.val());
+            _this.log.Info("Selected option: " + $selected.val() + " (" + $selected.text() + ")");
             if (ScriptUtil.version >= 2.0) {
                 var cboxId = 'testCheckBox';
                 var controller = _this.controller;

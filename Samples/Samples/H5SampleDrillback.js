@@ -5,7 +5,7 @@
  * Launches CRS610 using a standard Ming.le drillback link
  * Requires a Customer ID from the script arguments
  */
-var H5SampleDrillback = /** @class */ (function () {
+var H5SampleDrillback = (function () {
     function H5SampleDrillback(scriptArgs) {
         this.controller = scriptArgs.controller;
         this.log = scriptArgs.log;
@@ -28,10 +28,10 @@ var H5SampleDrillback = /** @class */ (function () {
     H5SampleDrillback.prototype.invokeDrillback = function () {
         var lid = "lid://infor.m3.m3devapp";
         var userContext = ScriptUtil.GetUserContext();
-        var acctEntity = "".concat(userContext.CurrentCompany, "_").concat(userContext.CurrentDivision);
+        var acctEntity = userContext.CurrentCompany + "_" + userContext.CurrentDivision;
         var bookmark = "&program=CRS610&panel=E&tableName=OCUSMA&option=5";
-        var keys = "&keys=OKCONO,880,OKCUNO,".concat(this.customer);
-        var drillback = "?LogicalId=".concat(lid, "&accountingEntity=").concat(acctEntity).concat(bookmark).concat(keys);
+        var keys = "&keys=OKCONO,880,OKCUNO," + this.customer;
+        var drillback = "?LogicalId=" + lid + "&accountingEntity=" + acctEntity + bookmark + keys;
         //Fire the drillback message using the Infor Ming.le JavaScript API
         infor.companyon.client.sendPrepareDrillbackMessage(drillback);
     };

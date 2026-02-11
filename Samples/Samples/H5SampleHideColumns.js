@@ -5,7 +5,7 @@
  * Hides column with column names MMITNO and MMITDS
  * Run in MMS001
  */
-var H5SampleHideColumns = /** @class */ (function () {
+var H5SampleHideColumns = (function () {
     function H5SampleHideColumns(scriptArgs) {
         this.controller = scriptArgs.controller;
     }

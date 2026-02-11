@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
         "target": "es5",
+        "lib": ["es2015", "dom"],
         "sourceMap": true,
+        "types": []
     },
     "exclude": [
         "../Nodejs/node_modules"

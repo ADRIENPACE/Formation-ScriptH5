@@ -4,7 +4,7 @@
 /**
  * Shows a message dialog information about the connected element and script arguments.
  */
-var H5SampleHelloWorld = /** @class */ (function () {
+var H5SampleHelloWorld = (function () {
     function H5SampleHelloWorld() {
     }
     /**
